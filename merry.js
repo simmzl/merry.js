@@ -28,4 +28,14 @@ class Merry{
             return res;
         }
     }
+    randomStr(len) {
+        const str = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM=+1234567890!@#$%^&*()";
+        let res = "";
+        for(let i = 0; i < len; i++){
+            // Math.floor() 向左取整
+            const index = Math.floor(Math.random() * 74);
+            res += str.charAt(index);
+        }
+        return res;
+    }
 }

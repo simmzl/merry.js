@@ -9,7 +9,8 @@
 
 ## 功能/参数
 - 禁止图片拖动`imgPrevent:true/false`（默认false）
-- 解决低版本IE不能使用document.getElementById()的问题，（默认开启）；
+- 解决低版本IE不能使用document.getElementByClassName()的问题，（默认开启）；
+- 生成随机字符串
 - 持续更新...
 
 ## 如何使用？
