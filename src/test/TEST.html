@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+    <script src="../merry.js"></script>
+    <script>
+        const log = console.log;
+        let my = new Merry({
+            imgPrevent :true
+        });
+        log(Merry);
+        log(my.randomStr(500));
+        log(my.randomStr(500, "12345ABCD"));
+    </script>
+    <!-- <script src="test.min.js"></script> -->
+</body>
+</html>
