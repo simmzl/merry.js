@@ -8,22 +8,38 @@
 "merry"取自海盗船黄金梅利号（Going Merry）中的merry。它是使用了ES6语法封装的一个能够解决常见问题的小型js库。
 
 ## 功能/参数
-- 禁止图片拖动`imgPrevent:true/false`（默认false）
-- 解决低版本IE不能使用document.getElementByClassName()的问题，（默认开启）；
-- 生成随机字符串
+- 禁止图片拖动`imgPrevent:true/false`（默认`false`）
+- 解决低版本IE不能使用`document.getElementByClassName()`的问题，（默认开启）；
+- 生成随机字符串`randomStr(length, dictionary)``,一共有两个参数:
+
+  - `length`随机字符串的长度；
+  - `dictionary`，自定义字典，字符串类型。为空时使用默认字典：`a-zA-Z0-9+=`，共64位；
 - 持续更新...
 
 ## 如何使用？
-
-### 引用
+### 下载
 ```
-<script src="merry.js"></script>
+git clone https://github.com/simmzl/merry.js.git
+```
+下载即用，无需安装依赖。
+### 引用
+#### script 引用
+```
+<script src="merry.min.js"></script>
+```
+#### import 引用
+```
+import Merry from "merry.min.js";
 ```
 ### 正式使用
 你仅需新建一个Merry实例，并设置相关参数即可生效！
 ```
-let myMerry = new Merry({
+let my = new Merry({
     //imgPrevent :true
 });
 
-```
+// 从默认字典中生成100长度的随机字符串
+my.randomStr(100);
+
+// 从`“abcd1234”`中生成100长度的随机字符串
+my.randomStr(100, "abcd1234");
