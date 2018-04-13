@@ -1,4 +1,4 @@
-class Merry{
+export default class Merry{
     constructor (props){
         this.imgPrevent = props.imgPrevent;
 
